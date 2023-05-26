@@ -1,0 +1,7 @@
+Complétez get_next_line() en lui permettant de gérer plusieurs fd.
+Par exemple, si les fd 3, 4 et 5 sont accessibles en lecture
+perdre les contenus lus sur chacun des fd, et
+sans retourner la mauvaise ligne.
+Vous devriez pouvoir appeler get_next_line() une fois avec le fd 3, puis le 4, le
+5, puis à nouveau le 3, à nouveau le 4, etc.
+Ajoutez le suffixe _bonus.[c\h] aux fichiers de cette partie.
