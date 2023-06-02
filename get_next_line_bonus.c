@@ -6,12 +6,11 @@
 /*   By: mapoirie <mapoirie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 14:37:22 by mapoirie          #+#    #+#             */
-/*   Updated: 2023/05/26 15:13:14 by mapoirie         ###   ########.fr       */
+/*   Updated: 2023/05/29 10:09:37 by mapoirie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*get_next_line(int fd)
 {
@@ -32,7 +31,6 @@ char	*get_next_line(int fd)
 	storage[fd] = ft_line_extract(line);
 	line_final = ft_strdup(line);
 	free (line);
-	line = NULL;
 	return (line_final);
 }
 
@@ -97,43 +95,4 @@ char	*ft_line_extract(char *line)
 	}
 	line[i + 1] = '\0';
 	return (temp);
-}
-
-int	main(void)
-{
-	int		fd;
-	int		fd2;
-	int		fd3;
-	int		fd4;
-	char	*line;
-
-	fd = open("texte.txt", O_RDONLY);
-	fd2 = open("texte2.txt", O_RDONLY);
-	fd3 = open("texte3.txt", O_RDONLY);
-	fd4 = open("texte4.txt", O_RDONLY);
-
-	line = get_next_line(fd);
-	printf("%s", line);
-	free(line);
-	line = get_next_line(fd2);
-	printf("%s", line);
-	free(line);
-	line = get_next_line(fd3);
-	printf("%s", line);
-	free(line);
-	line = get_next_line(fd4);
-	printf("%s", line);
-	free(line);
-	line = get_next_line(fd2);
-	printf("%s", line);
-	free(line);
-	line = get_next_line(fd4);
-	printf("%s", line);
-	free(line);
-	
-	close(fd);
-	close(fd2);
-	close(fd3);
-	close(fd4);
-	return (0);
 }

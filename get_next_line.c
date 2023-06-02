@@ -6,7 +6,7 @@
 /*   By: mapoirie <mapoirie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 13:25:53 by mapoirie          #+#    #+#             */
-/*   Updated: 2023/05/26 15:06:57 by mapoirie         ###   ########.fr       */
+/*   Updated: 2023/05/30 12:07:54 by mapoirie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ char	*get_next_line(int fd)
 	storage = ft_line_extract(line);
 	line_final = ft_strdup(line);
 	free (line);
-	line = NULL;
 	return (line_final);
 }
 
@@ -103,7 +102,7 @@ char	*ft_line_extract(char *line)
 // 	int		fd;
 // 	char	*line;
 
-// 	fd = open("texte.txt", O_RDONLY);
+// 	fd = open("texte5.txt", O_RDONLY);
 // 	while (1)
 // 	{
 // 		line = get_next_line(fd);
